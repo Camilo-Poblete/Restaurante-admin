@@ -1,0 +1,115 @@
+  :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #ee5a24;
+            --dark-color: #2c3e50;
+            --light-color:rgb(16, 118, 143);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar {
+            transition: all 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(114, 112, 112, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar.scrolled .navbar-brand,
+        .navbar.scrolled .nav-link {
+            color: var(--dark-color) !important;
+        }
+
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .contact-section {
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .footer {
+            background-color: #1a252f;
+            color: white;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo corregido para el botón Admin */
+        .btn-outline-light:hover {
+            background-color: var(--secondary-color) !important;
+            border-color: var(--secondary-color) !important;
+            color: white !important;
+        }
